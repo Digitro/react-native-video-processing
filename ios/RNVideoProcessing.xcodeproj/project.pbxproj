@@ -25,7 +25,26 @@
 		24F466DA1DD9F1CB0012172B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F4669B1DD9EB9B0012172B /* CoreVideo.framework */; };
 		24F466DB1DD9F1CB0012172B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F4669E1DD9EBBD0012172B /* QuartzCore.framework */; };
 		24FFDD151DDC799E006040F9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FFDD141DDC799E006040F9 /* MobileCoreServices.framework */; };
+		9C93FC8D2209CAAE0067225D /* AVUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C93FC8C2209CAAE0067225D /* AVUtilities.swift */; };
+		9C93FC982209CAC70067225D /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C93FC972209CABF0067225D /* GPUImage.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C93FC942209CABF0067225D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C93FC8E2209CABF0067225D /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
+			remoteInfo = GPUImage;
+		};
+		9C93FC962209CABF0067225D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C93FC8E2209CABF0067225D /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCE209E51943F20C002FEED8;
+			remoteInfo = GPUImageFramework;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		58B511D91A9E6C8500147676 /* CopyFiles */ = {
@@ -70,6 +89,8 @@
 		24F4669E1DD9EBBD0012172B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		24F466A01DD9EBC40012172B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		24FFDD141DDC799E006040F9 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9C93FC8C2209CAAE0067225D /* AVUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVUtilities.swift; sourceTree = "<group>"; };
+		9C93FC8E2209CABF0067225D /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C93FC982209CAC70067225D /* GPUImage.framework in Frameworks */,
 				24FFDD151DDC799E006040F9 /* MobileCoreServices.framework in Frameworks */,
 				24F466D81DD9F1CB0012172B /* AVFoundation.framework in Frameworks */,
 				24F466D91DD9F1CB0012172B /* CoreMedia.framework in Frameworks */,
@@ -99,7 +121,6 @@
 		2462719F1DDEF8AA003781DB /* RNVideoProcessing */ = {
 			isa = PBXGroup;
 			children = (
-				246271B21DDEF8AA003781DB /* RNVideoProcessing-Bridging-Header.h */,
 				246271CD1DDEF8C6003781DB /* RNVideoProcessing.h */,
 				246271B31DDEF8AA003781DB /* RNVideoProcessingBridge.m */,
 				246271B11DDEF8AA003781DB /* RNVideoPlayer.swift */,
@@ -143,6 +164,7 @@
 			children = (
 				24F055831E2E4A92009E0196 /* SDAVAssetExportSession */,
 				246271B61DDEF8AA003781DB /* RNVideoTrimmer-Bridging-Header.h */,
+				9C93FC8C2209CAAE0067225D /* AVUtilities.swift */,
 				246271B71DDEF8AA003781DB /* RNVideoTrimmer.swift */,
 				246271B81DDEF8AA003781DB /* RNVideoTrimmerBridge.m */,
 			);
@@ -161,6 +183,7 @@
 		24F466971DD9EB8B0012172B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C93FC8E2209CABF0067225D /* GPUImage.xcodeproj */,
 				24FFDD141DDC799E006040F9 /* MobileCoreServices.framework */,
 				24F466A01DD9EBC40012172B /* OpenGLES.framework */,
 				24F4669E1DD9EBBD0012172B /* QuartzCore.framework */,
@@ -174,10 +197,20 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				246271B21DDEF8AA003781DB /* RNVideoProcessing-Bridging-Header.h */,
 				2462719F1DDEF8AA003781DB /* RNVideoProcessing */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				24F466971DD9EB8B0012172B /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		9C93FC8F2209CABF0067225D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C93FC952209CABF0067225D /* libGPUImage.a */,
+				9C93FC972209CABF0067225D /* GPUImage.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,12 +258,35 @@
 			mainGroup = 58B511D21A9E6C8500147676;
 			productRefGroup = 58B511D21A9E6C8500147676;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9C93FC8F2209CABF0067225D /* Products */;
+					ProjectRef = 9C93FC8E2209CABF0067225D /* GPUImage.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				58B511DA1A9E6C8500147676 /* RNVideoProcessing */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9C93FC952209CABF0067225D /* libGPUImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGPUImage.a;
+			remoteRef = 9C93FC942209CABF0067225D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9C93FC972209CABF0067225D /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = 9C93FC962209CABF0067225D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
@@ -244,6 +300,7 @@
 				246271C01DDEF8AA003781DB /* RNVideoPlayer.swift in Sources */,
 				246271BE1DDEF8AA003781DB /* RNTrimmerViewBridge.m in Sources */,
 				246271BD1DDEF8AA003781DB /* RNTrimmerView.swift in Sources */,
+				9C93FC8D2209CAAE0067225D /* AVUtilities.swift in Sources */,
 				246271C11DDEF8AA003781DB /* RNVideoProcessingBridge.m in Sources */,
 				246271C51DDEF8AA003781DB /* VideoProcessingGPUFilters.swift in Sources */,
 				246271C31DDEF8AA003781DB /* RNVideoTrimmer.swift in Sources */,
