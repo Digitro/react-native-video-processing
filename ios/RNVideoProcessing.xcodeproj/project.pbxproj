@@ -25,8 +25,8 @@
 		24F466DA1DD9F1CB0012172B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F4669B1DD9EB9B0012172B /* CoreVideo.framework */; };
 		24F466DB1DD9F1CB0012172B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F4669E1DD9EBBD0012172B /* QuartzCore.framework */; };
 		24FFDD151DDC799E006040F9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FFDD141DDC799E006040F9 /* MobileCoreServices.framework */; };
-		9C93FC8D2209CAAE0067225D /* AVUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C93FC8C2209CAAE0067225D /* AVUtilities.swift */; };
 		9C93FC982209CAC70067225D /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C93FC972209CABF0067225D /* GPUImage.framework */; };
+		B429F6152251F40500062EA7 /* AVUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429F6142251F40500062EA7 /* AVUtilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +77,7 @@
 		246271B31DDEF8AA003781DB /* RNVideoProcessingBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNVideoProcessingBridge.m; sourceTree = "<group>"; };
 		246271B41DDEF8AA003781DB /* RNVideoProcessingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNVideoProcessingManager.swift; sourceTree = "<group>"; };
 		246271B61DDEF8AA003781DB /* RNVideoTrimmer-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNVideoTrimmer-Bridging-Header.h"; sourceTree = "<group>"; };
-		246271B71DDEF8AA003781DB /* RNVideoTrimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNVideoTrimmer.swift; sourceTree = "<group>"; };
+		246271B71DDEF8AA003781DB /* RNVideoTrimmer.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = RNVideoTrimmer.swift; sourceTree = "<group>"; tabWidth = 2; };
 		246271B81DDEF8AA003781DB /* RNVideoTrimmerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNVideoTrimmerBridge.m; sourceTree = "<group>"; };
 		246271B91DDEF8AA003781DB /* VideoProcessingGPUFilters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoProcessingGPUFilters.swift; sourceTree = "<group>"; };
 		246271CD1DDEF8C6003781DB /* RNVideoProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNVideoProcessing.h; sourceTree = "<group>"; };
@@ -89,8 +89,9 @@
 		24F4669E1DD9EBBD0012172B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		24F466A01DD9EBC40012172B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		24FFDD141DDC799E006040F9 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		9C93FC8C2209CAAE0067225D /* AVUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVUtilities.swift; sourceTree = "<group>"; };
 		9C93FC8E2209CABF0067225D /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
+		B429F6142251F40500062EA7 /* AVUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AVUtilities.swift; sourceTree = "<group>"; tabWidth = 2; };
+		B429F7102252496D00062EA7 /* RCTSwiftBridgeModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSwiftBridgeModule.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				246271CD1DDEF8C6003781DB /* RNVideoProcessing.h */,
+				B429F7102252496D00062EA7 /* RCTSwiftBridgeModule.h */,
 				246271B31DDEF8AA003781DB /* RNVideoProcessingBridge.m */,
 				246271B11DDEF8AA003781DB /* RNVideoPlayer.swift */,
 				246271B41DDEF8AA003781DB /* RNVideoProcessingManager.swift */,
@@ -164,8 +166,8 @@
 			children = (
 				24F055831E2E4A92009E0196 /* SDAVAssetExportSession */,
 				246271B61DDEF8AA003781DB /* RNVideoTrimmer-Bridging-Header.h */,
-				9C93FC8C2209CAAE0067225D /* AVUtilities.swift */,
 				246271B71DDEF8AA003781DB /* RNVideoTrimmer.swift */,
+				B429F6142251F40500062EA7 /* AVUtilities.swift */,
 				246271B81DDEF8AA003781DB /* RNVideoTrimmerBridge.m */,
 			);
 			path = RNVideoTrimmer;
@@ -253,6 +255,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -300,7 +303,7 @@
 				246271C01DDEF8AA003781DB /* RNVideoPlayer.swift in Sources */,
 				246271BE1DDEF8AA003781DB /* RNTrimmerViewBridge.m in Sources */,
 				246271BD1DDEF8AA003781DB /* RNTrimmerView.swift in Sources */,
-				9C93FC8D2209CAAE0067225D /* AVUtilities.swift in Sources */,
+				B429F6152251F40500062EA7 /* AVUtilities.swift in Sources */,
 				246271C11DDEF8AA003781DB /* RNVideoProcessingBridge.m in Sources */,
 				246271C51DDEF8AA003781DB /* VideoProcessingGPUFilters.swift in Sources */,
 				246271C31DDEF8AA003781DB /* RNVideoTrimmer.swift in Sources */,
@@ -404,7 +407,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "RNVideoProcessing-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -424,7 +427,7 @@
 				PRODUCT_NAME = RNVideoProcessing;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "RNVideoProcessing-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
