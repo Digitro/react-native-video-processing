@@ -162,9 +162,7 @@ public class Trimmer {
         if (cb != null) {
           cb.onSuccess(filePath);
         } else if (promise != null) {
-          WritableMap event = Arguments.createMap();
-          event.putString("source", filePath);
-          promise.resolve(event);
+          promise.resolve(filePath);
         }
       }
 
