@@ -231,6 +231,8 @@ public class Trimmer {
       event.putArray("images", images);
 
       promise.resolve(event);
+    } catch (final Exception e) {
+      promise.reject(e);
     } finally {
       retriever.release();
     }
@@ -281,6 +283,8 @@ public class Trimmer {
       }
 
       promise.resolve(event);
+    } catch (final Exception e) {
+      promise.reject(e);
     } finally {
       mmr.release();
     }
@@ -383,7 +387,14 @@ public class Trimmer {
 
     Context ctx = tctx != null ? tctx : rctx;
 
-    ReadableMap videoMetadata = getVideoRequiredMetadata(source, ctx);
+    ReadableMap videoMetadata;
+    try {
+      videoMetadata = getVideoRequiredMetadata(source, ctx);
+    } catch (final Exception e) {
+      promise.reject(e);
+      return;
+    }
+
     int videoWidth = videoMetadata.getInt("width");
     int videoHeight = videoMetadata.getInt("height");
     int videoBitrate = videoMetadata.getInt("bitrate");
@@ -485,6 +496,8 @@ public class Trimmer {
 
       // NOTE: FIX ROTATED BITMAP
       orientation = Integer.parseInt(metadataRetriever.extractMetadata(FFmpegMediaMetadataRetriever.METADATA_KEY_VIDEO_ROTATION));
+    } catch (final Exception e) {
+      promise.reject(e);
     } finally {
       metadataRetriever.release();
     }
@@ -605,7 +618,14 @@ public class Trimmer {
     int cropOffsetX = (int)( options.getDouble("cropOffsetX") );
     int cropOffsetY = (int)( options.getDouble("cropOffsetY") );
 
-    ReadableMap videoSizes = getVideoRequiredMetadata(source, ctx);
+    ReadableMap videoSizes;
+    try {
+      videoSizes = getVideoRequiredMetadata(source, ctx);
+    } catch (final Exception e) {
+      promise.reject(e);
+      return;
+    }
+
     int videoWidth = videoSizes.getInt("width");
     int videoHeight = videoSizes.getInt("height");
 
